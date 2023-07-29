@@ -1,0 +1,87 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+}
+
+.about-me,
+.photo-container {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #000;
+  margin-top: 30px;
+  
+  border-radius: 50px;
+}
+
+.about-me {
+  background: var(--color2);
+  width: 590px;
+  height: 400px;
+}
+
+.photo-container {
+    width: 394px;
+    height: 394px;
+}
+
+.home-container > div + div {
+  margin-left: 10px;
+}
+
+.info-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.8rem;
+}
+
+.abilities {
+  display: flex;
+  flex-direction: column;
+}
+
+.abilities-header {
+  text-decoration: underline;
+  text-align: center;
+  padding: 10px;
+}
+
+.abilities-images {
+  display: flex;
+  justify-content: center;
+}
+
+#html5,
+#css3,
+#js-badge,
+#react {
+    width: 50px;
+    height: 50px;
+}
+
+#html5 {
+  color: #ff5733;
+  margin-right: 23px;
+}
+
+#css3 {
+  color: #264de4;
+  margin-right: 23px;
+}
+
+#js-badge {
+  color: #f7df1e;
+  margin-right: 23px;
+}
+
+#react {
+  color: #61dbfb;
+}
