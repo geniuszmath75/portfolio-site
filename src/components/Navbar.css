@@ -52,7 +52,7 @@
 .menu-item-text {
     display: flex;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #000;
 }
 
@@ -60,4 +60,24 @@
     transition: all 0.5s ease-out;
     transform: scale(1.2);
     color: var(--color1);
+}
+
+@media screen and (max-width: 480px) {
+    .menu-item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-item + .menu-item {
+        margin-left: 40px;
+    }
+
+    .menu-item-img {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .menu-item-text {
+        font-size: 0.8rem;
+    }
 }
