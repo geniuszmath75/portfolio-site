@@ -1,0 +1,132 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 50px;
+    margin: 30px 0;
+    background: var(--color2);
+    width: 80%;
+}
+
+.contact-header-container {
+    display: flex;
+    margin: 37px 0 57px;
+}
+
+.contact-header {
+    text-align: center;
+}
+
+.contact-icons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icons-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.contact-item, .contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.contact-item + .contact-item{
+    margin-left: 5px;
+}
+
+.contact-icons {
+    color: #000;
+    border: 3px solid #000;
+    width: 60px;
+    height: 60px;
+    background: var(--color1);
+    padding: 5px;
+    border-radius: 20px;
+    transition: all 0.5s ease-out;
+}
+
+.contact-icons:hover {
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+
+#email-icon:hover { 
+    background: var(--color3);
+}
+
+#fb-icon:hover {
+    background: #0165E1;
+}
+
+#github-icon:hover {
+    background: #000;
+}
+
+#linkedin-icon:hover {
+    background: #0077b5;
+}
+
+#phone-icon:hover {
+    background: green;
+}
+
+@media screen and (max-width: 992px) {
+    .contact-wrapper {
+        font-size: 0.9rem;
+    }
+
+    .contact-item, .contact-links {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-icons {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-header-container {
+        margin: 30px 0 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-wrapper {
+        font-size: 0.9rem;
+    }
+
+    .contact-item, .contact-links {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contact-icons {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contact-item + .contact-item {
+        margin-left: 5px;
+    }
+
+    .contact-header-container {
+        margin: 30px 0 30px;
+    }
+}

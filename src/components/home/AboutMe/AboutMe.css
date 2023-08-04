@@ -1,0 +1,144 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me,
+.photo-container {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #000;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+.about-me {
+  background: var(--color2);
+  width: 50%;
+  height: 400px;
+}
+
+.photo-container {
+  width: 30%;
+  height: 394px;
+}
+
+.home-container > div + div {
+  margin-left: 10px;
+}
+
+.info-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.8rem;
+}
+
+.abilities {
+  display: flex;
+  flex-direction: column;
+}
+
+.abilities-header {
+  text-decoration: underline;
+  text-align: center;
+  padding: 10px;
+}
+
+.abilities-icons {
+  display: flex;
+  justify-content: center;
+}
+
+#html5,
+#css3,
+#js-badge,
+#react {
+  width: 50px;
+  height: 50px;
+}
+
+#html5 {
+  color: #ff5733;
+  margin-right: 23px;
+}
+
+#css3 {
+  color: #264de4;
+  margin-right: 23px;
+}
+
+#js-badge {
+  color: #f7df1e;
+  margin-right: 23px;
+}
+
+#react {
+  color: #61dbfb;
+}
+
+@media screen and (max-width: 480px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-container .about-me {
+    order: 2;
+  }
+
+  .home-container > div + div {
+    margin-left: 0px;
+  }
+
+  .about-me,
+  .photo-container {
+    width: 80%;
+    height: 330px;
+    font-size: 1.1rem;
+  }
+
+  #html5,
+  #css3,
+  #js-badge,
+  #react {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-container .about-me {
+    order: 2;
+    width: 80%;
+  }
+
+  .home-container > div + div {
+    margin-left: 0px;
+  }
+
+  .photo-container {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  #html5,
+  #css3,
+  #js-badge,
+  #react {
+    width: 40px;
+    height: 40px;
+  }
+}
