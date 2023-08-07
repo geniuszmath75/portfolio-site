@@ -3,14 +3,14 @@ import "./Projects.css";
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-function Projects() {
+function Projects({ polishVer, projectOnePl, projectOneEn }) {
   return (
     <div className="projects-container" id="projects">
       <div className="projects-item">
         <div className="project-wrapper">
           <Link to="http://projektdamian.pl" className="projects-link">
             <div className="project-description">
-              <p className="description-text">Website browser to look for information about countries.</p>
+              <p className="description-text">{polishVer ? projectOnePl : projectOneEn}</p>
             </div>
             <div className="link-button">
               <FiExternalLink className="link-image" />
