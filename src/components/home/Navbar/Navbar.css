@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .navbar-container {
@@ -16,6 +17,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.website-language {
+    position: absolute;
+    right: 30px;
+}
+
+.not-active-button, .active-button {
+    padding: 4px 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.not-active-button + .active-button, .active-button + .not-active-button {
+    margin-right: 5px;
+}
+
+.not-active-button {
+    background: transparent;
+}
+
+.active-button {
+    background: var(--color3);;
 }
 
 .nav-links {
@@ -64,20 +91,35 @@
 
 @media screen and (max-width: 480px) {
     .menu-item {
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
     }
 
     .menu-item + .menu-item {
-        margin-left: 40px;
+        margin-left: 25px;
     }
 
     .menu-item-img {
-        width: 2.3rem;
-        height: 2.3rem;
+        width: 2rem;
+        height: 2rem;
     }
 
     .menu-item-text {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    .website-language {
+        display: flex;
+        flex-direction: column;
+        right: 5px;
+    }
+
+    .not-active-button, .active-button {
+        padding: 2px 4px;
+        font-size: 0.9rem;
     }
 }
