@@ -2,20 +2,20 @@ import React from "react";
 import { DiHtml5, DiCss3, DiReact, DiJsBadge } from "react-icons/di";
 import "./AboutMe.css";
 
-function Home() {
+function Home({polishVer, websiteDescPl1, websiteDescPl2, websiteDescEn1, websiteDescEn2, titlePl, titleEn}) {
   return (
     <div className="home-container" id="about-me">
       <div className="about-me">
         <div className="info-text-container">
           <p className="info-text">
-            Hey, I’m Damian and it’s my portfolio website.
+            {polishVer ? websiteDescPl1 : websiteDescEn1}
           </p>
           <p className="info-text">
-            If you are interested in my projects, feel free to contact me.
+            {polishVer ? websiteDescPl2 : websiteDescEn2}
           </p>
         </div>
         <div className="abilities">
-          <h3 className="abilities-header">ABILITIES:</h3>
+          <h3 className="abilities-header">{polishVer ? titlePl : titleEn}</h3>
           <div className="abilities-icons">
             <DiHtml5 id="html5"/>
             <DiCss3 id="css3"/>
