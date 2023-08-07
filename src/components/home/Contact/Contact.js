@@ -5,13 +5,13 @@ import { MdEmail } from "react-icons/md";
 import "./Contact.css";
 import { IconContext } from "react-icons";
 
-function Contact() {
+function Contact({polishVer, titlePl, titleEn}) {
   return (
     <IconContext.Provider value={{ className: "contact-icons" }}>
       <div className="contact-container" id="contact">
         <div className="contact-wrapper">
           <div className="contact-header-container">
-            <h1 className="contact-header">Contact</h1>
+            <h1 className="contact-header">{polishVer ? titlePl : titleEn}</h1>
           </div>
           <div className="contact-icons-wrapper">
             <ul className="icons-list">
