@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { MdHome, MdAssignment, MdPerson } from "react-icons/md";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Navbar({
   homeBtnPl,
@@ -32,7 +32,8 @@ function Navbar({
           <div className="navbar-container">
             <ul className="menu-items">
               <li className="menu-item">
-                <Link to="/" className="nav-links">
+                <Link to="/#about-me" className="nav-links"
+                >
                   <MdHome />
                   <div className="menu-item-text">
                     {polishVer ? homeBtnPl : homeBtnEn}

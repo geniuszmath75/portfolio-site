@@ -1,5 +1,15 @@
 :root {
-    --color1: #FEFAE0;
-    --color2: #5CD5AE;
-    --color3: #D4A373;
+  --color1: #fefae0;
+  --color2: #5cd5ae;
+  --color3: #d4a373;
+}
+
+@keyframes showComponent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }

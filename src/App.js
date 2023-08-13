@@ -13,6 +13,11 @@ import { contactData } from "./components/home/Contact/Data";
 function App() {
   const [click, setClick] = useState(true);
   const [polishVer, setPolishVer] = useState(true);
+  const [showComponent, setShowComponent] = useState(false);
+
+  const handleShowComponent = () => {
+    if (!showComponent) setShowComponent(true);
+  };
 
   const handleClickPL = () => {
     if (click) {
@@ -37,9 +42,24 @@ function App() {
         polishVer={polishVer}
         {...navbarData}
       />
-      <AboutMe polishVer={polishVer} {...aboutMeData} />
-      <Projects polishVer={polishVer} {...projectsData} />
-      <Contact polishVer={polishVer} {...contactData} />
+      <AboutMe
+        polishVer={polishVer}
+        {...aboutMeData}
+        showComponent={showComponent}
+        handleShowComponent={handleShowComponent}
+      />
+      <Projects
+        polishVer={polishVer}
+        {...projectsData}
+        showComponent={showComponent}
+        handleShowComponent={handleShowComponent}
+      />
+      <Contact
+        polishVer={polishVer}
+        {...contactData}
+        showComponent={showComponent}
+        handleShowComponent={handleShowComponent}
+      />
     </Router>
   );
 }

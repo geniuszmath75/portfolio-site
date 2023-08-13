@@ -9,6 +9,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    visibility: hidden;
+    animation: showComponent 3s 4s forwards;
     width: 80%;
     border: 3px solid #000;
     border-radius: 50px;
