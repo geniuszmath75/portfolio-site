@@ -15,7 +15,7 @@
     background: var(--color2);
     width: 80%;
     visibility: hidden;
-    animation: showComponent 3s 6s forwards;
+    animation: showComponent 2.5s 1.5s forwards;
 }
 
 .contact-header-container {

@@ -20,19 +20,24 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  animation: showComponent 3s 2s forwards;
+  animation: showComponent 2.5s 0.5s forwards;
   background: var(--color2);
   width: 50%;
   height: 400px;
 }
 
 .photo-container {
-  animation: showComponent 5s forwards;
+  animation: showComponent 2.5s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30%;
   height: 394px;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
 }
 
 .home-container > div + div {
