@@ -8,7 +8,7 @@ function Projects({ polishVer, projectOnePl, projectOneEn }) {
     <div className="projects-container" id="projects">
       <div className="projects-item">
         <div className="project-wrapper">
-          <Link to="http://projektdamian.pl" className="projects-link">
+          <Link to="https://countrysearcher.pl" className="projects-link">
             <div className="project-description">
               <p className="description-text">{polishVer ? projectOnePl : projectOneEn}</p>
             </div>

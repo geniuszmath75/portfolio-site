@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { MdHome, MdAssignment, MdPerson } from "react-icons/md";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
@@ -17,13 +17,14 @@ function Navbar({
   handleClickPL
 }) {
   
-  const { hash } = useLocation();
+  let location = useLocation();
+  
   useEffect(() => {
-    if (hash) {
-      const targetElement = document.getElementById(hash.substring(1));
+    if (location.hash) {
+      const targetElement = document.getElementById(location.hash.substring(1));
       targetElement?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [hash]);
+  }, [location]);
 
   return (
     <IconContext.Provider value={{ className: "menu-item-img" }}>
@@ -32,25 +33,25 @@ function Navbar({
           <div className="navbar-container">
             <ul className="menu-items">
               <li className="menu-item">
-                <Link to="/#about-me" className="nav-links"
+                <NavLink exact to="/" className="nav-links"
                 >
                   <MdHome />
                   <div className="menu-item-text">
                     {polishVer ? homeBtnPl : homeBtnEn}
                   </div>
-                </Link>
+                </NavLink>
               </li>
               <li className="menu-item">
-                <Link to="#projects" className="nav-links">
+                <NavLink to="#projects" className="nav-links">
                   <MdAssignment />
                   <div className="menu-item-text">{polishVer ? projectsBtnPl : projectsBtnEn}</div>
-                </Link>
+                </NavLink>
               </li>
               <li className="menu-item">
-                <Link to="#contact" className="nav-links">
+                <NavLink to="#contact" className="nav-links">
                   <MdPerson />
                   <div className="menu-item-text">{polishVer ? contactBtnPl : contactBtnEn}</div>
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <div className="website-language">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { DiHtml5, DiCss3, DiReact, DiJsBadge } from "react-icons/di";
 import "./AboutMe.css";
 
